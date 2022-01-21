@@ -1,0 +1,60 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Vai importar o arquivo "_resets" e vai implementar no código atual ("main.scss") e o compilador vai implementar o código de "main.scss" em "main.css" */
+/*Quando há vários valores dentro de um parênteses, chamamos isso de "map"*/
+/* Para setar uma variável, utiliza-se o sinal de "$" */
+/*Diferença entre @function e @mixin:
+functions: são utilizadas para processar valores e retornar valores
+mixins: definem configurações de estilos*/
+body {
+  background-color: rgba(0, 0, 0, 0.712);
+  color: #fff;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.main .main__paragraph1, .main .main__paragraph2 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.main .main__paragraph1:hover, .main .main__paragraph2:hover {
+  /*main:hover*/
+  color: red;
+}
+
+.main .main__paragraph2:hover {
+  color: #ff652f;
+}
+
+@media (max-width: 800px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,35 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*Vai importar o arquivo "_resets" e vai implementar no código atual ("main.scss") e o compilador vai implementar o código de "main.scss" em "main.css" */
+/*Quando há vários valores dentro de um parênteses, chamamos isso de "map"*/
+/* Para setar uma variável, utiliza-se o sinal de "$" */
+body {
+  background-color: rgba(0, 0, 0, 0.712);
+  font-weight: 700;
+  /*Propriedade CSS: map, valor a ser recebido */
+  color: #fff;
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  /*Ao invés de criar um novo bloco com .main p{}, apenas crie 1 bloco:*/
+}
+
+.main .main__paragraph {
+  /*Ao invés de digitar "main" novamente (main__paragraph), é utilizado "&" no lugar de "main"*/
+  /*Quando utilizado .main .main__paragraph quer dizer que vai aplicar para todas as tags/classes/ids ... a seguinte função:*/
+  font-weight: 400;
+}
+
+.main:hover {
+  /*main:hover*/
+  color: red;
+}
+/*# sourceMappingURL=main.css.map */

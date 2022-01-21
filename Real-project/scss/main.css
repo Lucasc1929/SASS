@@ -1,0 +1,154 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  height: 100vh;
+  padding-top: 40vh;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-size: cover;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(27, 27, 27, 0.1)), to(rgba(27, 27, 27, 0.7))), url("../dist/img/model-1.jpg") center top;
+  background: linear-gradient(to right, rgba(27, 27, 27, 0.1), rgba(27, 27, 27, 0.7)), url("../dist/img/model-1.jpg") center top;
+}
+
+.home_name {
+  font-size: 5rem;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  border-bottom: 2px solid black;
+}
+
+.home_name .home_name-last {
+  color: orange;
+  font-weight: 700;
+}
+
+.menu-button {
+  position: absolute;
+  z-index: 1;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-button .menu-btn_burger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-button .menu-btn_burger::before {
+  /*& = Para todas as configurações anteriores*/
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-button .menu-btn_burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-button .menu-btn_burger.open {
+  -webkit-transform: rotate(720deg);
+          transform: rotate(720deg);
+  background-color: transparent;
+}
+
+.menu-button .menu-btn_burger.open::before {
+  -webkit-transform: rotate(45deg) translate(5px, 8px);
+          transform: rotate(45deg) translate(5px, 8px);
+}
+
+.menu-button .menu-btn_burger.open::after {
+  width: 28px;
+  -webkit-transform: rotate(-45deg) translate(3px, -7px);
+          transform: rotate(-45deg) translate(3px, -7px);
+}
+
+body {
+  background: #1b1b1b;
+  color: black;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 1rem;
+  /*1rem = 16px, 2rem = 32px ...*/
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+
+main .social-icons {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+main a {
+  padding: 0.4rem;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+main a:hover {
+  color: orange;
+}
+
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: black;
+}
+/*# sourceMappingURL=main.css.map */
